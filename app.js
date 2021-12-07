@@ -34,7 +34,6 @@ nameForm.addEventListener('submit', (e) => {
     displayCurrentGameEl(name1, name2, score1, score2);
 });
 
-
 teamOneAddButton.addEventListener('click', () => {
     // increment the current state for team one's score
     score1++;
@@ -74,18 +73,12 @@ finishGameButton.addEventListener('click', () => {
     
     pastGamesArr.push(gameObj);
     // HINT: it will be helpful to keep track of these games as objects with 4 properties, one for each piece of state we're tracking
-
     displayAllGames();
 
-
- 
     // reset the initial state to start with a new form
-
-
     resetGame();
     displayCurrentGameEl(name1, name2, score1, score2);
 });
-
 
 function displayCurrentGameEl(name1, name2, score1, score2) {
     // clear out the current game div
@@ -117,7 +110,6 @@ function displayCurrentGameEl(name1, name2, score1, score2) {
     currentGameEl.append(div);
 }
 
-
 function displayAllGames() {
     // clear out the past games list in the DOM
     pastGamesEl.textContent = '';
@@ -129,12 +121,11 @@ function displayAllGames() {
     }
 }
 
-
-displayCurrentGameEl(name1, name2, score1, score2);
-
 function resetGame(){
     name1 = ``;
     name2 = ``;
     score1 = 0;
     score2 = 0;
 }
+
+displayCurrentGameEl(name1, name2, score1, score2);
